@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Xmtools",
+  "description": "This extension helps to simplify some actions in nobunyaga",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+	"default_title": "xmtools"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+		"http://*.app0.mixi-platform.com/gadgets/*",
+		"http://*.app.mbga-platform.jp/gadgets/*",
+    "http://*.ld.mygc-platform.jp/mygc-shindig/gadgets/*"
+	  ],
+      "js": ["jquery.js", "jquery.simulate.js", "jquery.simulate.ext.js", "jquery.simulate.drag-n-drop.js", "nobunyaga.js"],
+	  "run_at": "document_idle",
+	  "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
