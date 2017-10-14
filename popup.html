@@ -12,8 +12,11 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-        width: 200px;
+        width: 250px;
         height: 200px;
+      }
+      #questId {
+        width: 25px;
       }
       #status {
         /* avoid an excessively wide status text */
@@ -35,6 +38,7 @@
   <body>
     <div>
       <span>新手任务：</span>
+      <input type="text" id="questId" value="1">
       <button id="startTrial">开始</button>
       <button id="unitTest">Test</button>
     </div>
